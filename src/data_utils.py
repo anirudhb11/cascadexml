@@ -60,8 +60,8 @@ def get_inv_prop(dataset, Y):
 
     print("Creating inv_prop file")
     
-    A = {'Eurlex': 0.6, 'Amazon-670K': 0.6, 'Amazon-3M': 0.6, 'AmazonCat-13K': 0.55, 'Wiki-500K' : 0.5, 'Wiki10-31K' : 0.55}
-    B = {'Eurlex': 2.6, 'Amazon-670K': 2.6, 'Amazon-3M': 2.6, 'AmazonCat-13K': 1.5, 'Wiki-500K': 0.4, 'Wiki10-31K': 1.5}
+    A = {'Eurlex': 0.6, 'Amazon-670K': 0.6, 'Amazon-3M': 0.6, 'AmazonCat-13K': 0.55, 'Wiki-500K' : 0.5, 'Wiki10-31K' : 0.55, 'LF-AmazonTitles-131K': 0.6}
+    B = {'Eurlex': 2.6, 'Amazon-670K': 2.6, 'Amazon-3M': 2.6, 'AmazonCat-13K': 1.5, 'Wiki-500K': 0.4, 'Wiki10-31K': 1.5, 'LF-AmazonTitles-131K': 2.6}
 
     d = dataset.split('/')[-1]
     a, b = A[d], B[d]
