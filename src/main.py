@@ -15,9 +15,9 @@ from Runner_sparse import SparseRunner
 # from Runner_accelerate import Runner
 from dist_eval_sampler import DistributedEvalSampler
 
-NUM_LABELS = {'Amazon-670K': 670091, 'Amazon-3M': 2812281, 'Wiki-500K' : 501070, 'AmazonCat-13K': 13330, 'Wiki10-31K': 30938, 'Eurlex': 3993, 'AT670': 670091, 'WT500': 501070, 'WSAT350': 352072}
-NUM_CLUSTERS = {'Amazon-670K': 8192, 'Amazon-3M': 131072, 'Wiki-500K' : 65536, 'AmazonCat-13K': 128, 'Wiki10-31K': 256, 'Eurlex': 64, 'AT670': 8192, 'WT500':8192, 'WSAT350': 8192}
-EVAL_SCHEME = {'Amazon-670K': 'weighted', 'Amazon-3M': 'weighted', 'Wiki-500K' : 'level', 'AmazonCat-13K': 'level', 'Wiki10-31K': 'weighted'}
+NUM_LABELS = {'Amazon-670K': 670091, 'Amazon-3M': 2812281, 'Wiki-500K' : 501070, 'AmazonCat-13K': 13330, 'Wiki10-31K': 30938, 'Eurlex': 3993, 'AT670': 670091, 'WT500': 501070, 'WSAT350': 352072, 'LF-AmazonTitles-131K': 131073}
+NUM_CLUSTERS = {'Amazon-670K': 8192, 'Amazon-3M': 131072, 'Wiki-500K' : 65536, 'AmazonCat-13K': 128, 'Wiki10-31K': 256, 'Eurlex': 64, 'AT670': 8192, 'WT500':8192, 'WSAT350': 8192, 'LF-AmazonTitles-131K': 2048}
+EVAL_SCHEME = {'Amazon-670K': 'weighted', 'Amazon-3M': 'weighted', 'Wiki-500K' : 'level', 'AmazonCat-13K': 'level', 'Wiki10-31K': 'weighted', 'LF-AmazonTitles-131K': 'weighted'}
 
 def get_exp_name():
     name = [params.dataset, params.mn, '' if 'bert-base' in params.bert else params.bert]
